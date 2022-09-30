@@ -2,10 +2,15 @@ import '../styles/globals.css';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import resumeReducer from '../reducers/resumeReducer';
+import rootReducer from '../reducers';
+import { useEffect } from 'react';
+import { getDataFromLocalStorage } from '../actions/resumeActions';
 
-const store = createStore(resumeReducer, composeWithDevTools())
+export const store = createStore(rootReducer, composeWithDevTools())
 function MyApp({ Component, pageProps }) {
+  useEffect(() => {
+    store.dispatch(getDataFromLocalStorage());
+  }, []);
   return (
     <Provider store={store}>
       <Component {...pageProps} />
