@@ -245,6 +245,7 @@ function Edit({
             Company Name
             <br />
             <Input
+              required
               type="text"
               id="companyName"
               name="companyName"
@@ -258,6 +259,7 @@ function Edit({
             Designation
             <br />
             <Input
+              required
               type="text"
               id="designation"
               name="designation"
@@ -271,6 +273,7 @@ function Edit({
             Duration
             <br />
             <Input
+              required
               size="20%"
               type="number"
               id="duration"
