@@ -1,7 +1,6 @@
 import { connect } from "react-redux";
 
 function Preview({personalInfo, educationDetails}) {
-  console.log(educationDetails);
   return(
     <div>
       <h2>Resume</h2>

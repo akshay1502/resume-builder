@@ -82,14 +82,16 @@ export default function resumeReducer(state = initialState, action) {
     }
     case actions.GET_DATA_FROM_LOCALSTORAGE: {
       const getData = window.localStorage.getItem('initialState');
-      const jsonData = JSON.parse(getData);
-      if (Object.keys(jsonData).length) {
-        return {
-          ...state,
-          ...jsonData
+      if (getData) {
+        const jsonData = JSON.parse(getData);
+        if (Object.keys(jsonData).length) {
+          return {
+            ...state,
+            ...jsonData
+          }
         }
       }
-      break;
+      return state;
     }
     default:
       return state;
