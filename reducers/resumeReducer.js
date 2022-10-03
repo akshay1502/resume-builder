@@ -16,6 +16,15 @@ export const initialState = {
     githubErrMsg: '',
     linkedInErrMsg: ''
   },
+  experienceDetails: [
+    // format for experience
+    // {
+    //   companyName: '',
+    //   designation: '',
+    //   duration: '',
+    //   summary: ''
+    // }
+  ],
   educationDetails: [
     // format for educational details
     // {
@@ -92,6 +101,12 @@ export default function resumeReducer(state = initialState, action) {
         }
       }
       return state;
+    }
+    case actions.UPDATE_EXPERIENCE: {
+      return {
+        ...state,
+        experienceDetails: state.experienceDetails.concat({...action.payload, id: Math.random})
+      }
     }
     default:
       return state;

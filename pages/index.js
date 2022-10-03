@@ -1,7 +1,23 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import styles from '../styles/Home.module.css';
+import styled from 'styled-components';
 
+const Heading = styled.h1`
+  margin-bottom: 48px;
+  font-size: 64px;
+`;
+const Button  = styled.button`
+  font-size: 16px;
+  padding: 12px 24px;
+  background: #010101;
+  border: none;
+  color: white;
+  font-weight: 500;
+  margin-right: 32px;
+  border-radius: 4px;
+  cursor: pointer;
+`;
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -12,12 +28,12 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1 className={styles.title}>Resume Builder</h1>
+        <Heading>Resume Builder</Heading>
         <Link href="/edit">
-          <button className={styles.btn}>Edit</button>
+          <Button>Edit</Button>
         </Link>
         <Link href="/preview">
-          <button className={styles.btn}>Preview</button>
+          <Button>Preview</Button>
         </Link>
       </main>
     </div>

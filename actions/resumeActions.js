@@ -3,6 +3,7 @@ export const VALIDATE_PERSONALINFO = 'VALIDATE_PERSONALINFO';
 export const UPDATE_EDUCATION = 'UPDATE_EDUCATION';
 export const STORE_TO_LOCALSTORAGE = 'STORE_TO_LOCALSTORAGE';
 export const GET_DATA_FROM_LOCALSTORAGE = 'GET_DATA_FROM_LOCALSTORAGE';
+export const UPDATE_EXPERIENCE =  'UPDATE_EXPERIENCE';
 
 export const updatePersonalInfo = (obj) => ({
   type: UPDATE_PERSONALINFO,
@@ -25,4 +26,9 @@ export const storeToLocalStorage = () => ({
 
 export const getDataFromLocalStorage = () => ({
   type: GET_DATA_FROM_LOCALSTORAGE
+})
+
+export const updateExperinece = (obj) => ({
+  type: UPDATE_EXPERIENCE,
+  payload: obj
 })
