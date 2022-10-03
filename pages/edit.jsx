@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { connect } from 'react-redux';
 import { storeToLocalStorage, updateEducation, updateExperinece, updatePersonalInfo, validatePersonalInfo } from '../actions/resumeActions';
-// import styles from '../styles/edit.module.css';
 import styled from 'styled-components';
 
 const Heading2 = styled.h2`
